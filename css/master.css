@@ -1,0 +1,144 @@
+            * {
+                box-sizing: border-box;
+                margin: 0;
+            }
+            
+            body {
+                font-family: 'Open Sans', sans-serif;
+            }
+            
+             :root {
+                --main-color: #19c8fa;
+            }
+            /* start-nav */
+            
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: absolute;
+                z-index: 1;
+            }
+            
+            nav {
+                flex: 0;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                position: relative;
+            }
+            
+            nav::after {
+                content: '';
+                width: calc( 100% + 20px);
+                height: 2px;
+                position: absolute;
+                bottom: 0;
+                left: 15px;
+                background-color: white;
+            }
+            
+            nav .image {
+                display: flex;
+                justify-content: center;
+                height: 37px;
+                margin-top: -21px;
+            }
+            
+            nav .link ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+            }
+            
+            nav .link ul li {
+                padding: 40px 15px;
+                font-size: 20px;
+            }
+            
+            nav .link ul li a {
+                color: white;
+                text-decoration: none;
+                transition-duration: 0.5s;
+            }
+            
+            nav .link ul li a.active,
+            nav .link ul li a:hover {
+                text-decoration: none;
+                color: var(--main-color);
+                border-bottom: 2px solid var(--main-color);
+            }
+            
+            .search i {
+                font-size: 30px;
+                padding-left: 14px;
+                position: absolute;
+                top: 45%;
+                color: white;
+                transform: translateY(-50%);
+                border-left: 2px solid white;
+            }
+            /* end-nav */
+            /* start-landing */
+            
+            .landing {
+                padding-top: 200px;
+                display: flex;
+                position: relative;
+                background-image: url(/images/landing.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            .landing::after {
+                content: "";
+                width: 50%;
+                height: 300px;
+                background-color: rgb(76 175 152 / 51%);
+                position: absolute;
+                left: 0;
+                top: 162px;
+            }
+            
+            .landing div:first-child,
+            .landing div:nth-child(3) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                font-size: 23px;
+                color: white;
+                margin-top: -140px;
+                z-index: 1;
+            }
+            
+            .landing .hello {
+                width: calc(50% - 50px);
+                letter-spacing: 0.13px;
+                line-height: 29px;
+                color: white;
+                z-index: 1;
+            }
+            
+            .landing div:nth-child(3) {
+                position: absolute;
+                left: 90%;
+                top: 70%;
+                display: block;
+            }
+            
+            .landing div:last-child {
+                margin-top: 315px;
+                color: white;
+                font-size: 20px;
+            }
+            
+            .landing div:last-child i {
+                padding: 10px;
+            }
+            
+            .landing div:last-child i:nth-child(2) {
+                color: var(--main-color);
+            }
+            /* end-landing */
